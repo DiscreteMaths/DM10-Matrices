@@ -1,10 +1,52 @@
 
+\documentclass[12pt]{article}
+%\usepackage[final]{pdfpages}
+
+\usepackage{graphicx}
+\graphicspath{{/Users/kevinhayes/Documents/teaching/images/}}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\newcommand{\bbr}{\Bbb{R}}
+\newcommand{\zn}{\Bbb{Z}^n}
+
+%\usepackage{epsfig}
+%\usepackage{subfigure}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{natbib}
+\usepackage{amsbsy}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{eurosym}
+%\usepackage{beamerarticle}
+\usepackage{txfonts}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+
+\pagenumbering{arabic}
+
+\begin{document}
+\section{Proof by Induction}
+
 %-----------------------------------------------------------------------------%
 %----------------------------------------------------------------------------------------------%
 
-	\ noindent \textbf{Sigma Notation}
+	\noindent \textbf{Sigma Notation}
 	
-	\vspace{-1cm}
+
 	Let $s_n = 1 + 3 + 5 + \ldots + (2n-1)$ for $n \in Z^{+}$.\\
 	\bigskip
 	\begin{itemize}
@@ -15,22 +57,12 @@
 		\item[3.] Find a recurrence relation which expresses $s_{n+1}$ in terms of $s_n$.
 	\end{itemize}
 
-%----------------------------------------------------------------------------------------------%
-
-	\ noindent \textbf{Sigma Notation}
 	
 	
 	\textbf{Part 1}: Express $s_n$ using $\sum$ notation.
 	\[s_n = 1 + 3 + 5 + \ldots + (2n-1) \mbox{   for }n \in Z^{+}\]
 	
-	
-	
 
-%----------------------------------------------------------------------------------------------%
-
-	\ noindent \textbf{Sigma Notation}
-	
-	\vspace{-1cm}
 	\textbf{Part 1}: Express $s_n$ using $\sum$ notation.
 	\[s_n = 1 + 3 + 5 + \ldots + (2n-1) \mbox{   for }n \in Z^{+}\]
 	
@@ -39,9 +71,7 @@
 		\[  \sum^{k=n}_{k=1} (2k-1) \]
 	}
 
-%----------------------------------------------------------------------------------------------%
 
-	\ noindent \textbf{Sigma Notation}
 	
 	
 	\textbf{Part 2}: Calculate $s_1$, $s_2$ and $s_3$.
@@ -54,9 +84,7 @@
 	
 	
 
-%----------------------------------------------------------------------------------------------%
 
-	\ noindent \textbf{Sigma Notation}
 	
 	
 	\textbf{Part 2}: Calculate $s_1$, $s_2$ and $s_3$.
@@ -73,11 +101,11 @@
 	\end{itemize}
 	
 
-%----------------------------------------------------------------------------------------------%
 
-	\ noindent \textbf{Sigma Notation}
 	
 	
 	\textbf{Part 3}: Find a recurrence relation which expresses $s_{n+1}$ in terms of $s_n$.
 	
 	
+
+\end{document}
