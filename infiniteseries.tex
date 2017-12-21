@@ -35,3 +35,128 @@ Consider the \emph{harmonic sequence} $a_n=1/n$ and the corresponding infinite \
 The first series is the harmonic series and the terms in the second series are less than or equal to the corresponding terms in the harmonic series. However, the second series diverges as it is the sum of an infinite number of $1/2$ terms. So the harmonic series is always greater than a series which diverges, and so the harmonic series itself is divergent.
 
 So even though the terms $a_n \to 0$, the addition of an infinite number of them can still cause a series to diverge as $n \to \infty $. A better test for whether a series converges is needed.
+
+\newpage
+
+
+\pagebreak
+\subsection*{Infinite Series}
+An infinite series is a series whose terms are summed indefinitely. For an infinite sequence $a_0,a_1,a_2,a_3,\ldots,a_n,\ldots$, the corresponding infinite series $s_\infty$ is written
+\begin{equation*}
+  s_\infty=\sum_{n=0}^{\infty}a_n=a_0+a_1+a_2+a_3+a_4+a_5+\cdots
+\end{equation*}
+Formally, an infinite series can be expressed as the limit of the series as $n\to \infty$
+\begin{equation*}
+  s_\infty = \lim_{n \to \infty} s_n = \lim_{n \to \infty} \sum_{k=0}^n a_k 
+\end{equation*}
+For any particular series, this limit may or may not exist. If it does exist, then $s_\infty$ is defined and the infinite series is \emph{convergent}. If the limit does not exist then $s_\infty$ is not defined and the infinite series is \emph{divergent}.
+
+\noindent  \textbf{Example:}\\
+The infinite series
+\begin{equation*}
+  s_\infty = 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\cdots = 2
+\end{equation*}
+Letting $a_n=\left(\frac{1}{2}\right)^n$, $s_\infty$ is the limit of the sequence $s_n=\sum_{k=0}^{n} \left(\frac{1}{2}\right)^k$. Applying the formula for the sum of a geometric series gives 
+\begin{align*}
+  s_n = \sum_{k=0}^{n} \frac{1}{2^k} = \frac{1- \left( \frac{1}{2} \right)^{n+1} }{1-\frac{1}{2}} = 2 \left[ 1-\frac{1}{2^{n+1}} \right]
+\end{align*}
+And so applying the definition of the infinite series gives.
+\begin{equation*}
+  s_\infty=\lim_{n \to \infty} s_n = \lim_{n \to \infty} 2 \left[ 1- \frac{1}{2^{n+1}} \right]= 2 \left[ 1-0 \right] = 2
+\end{equation*}\\
+A \emph{necessary} condition for the convergence of an infinite series is that the terms in the sequence $a_n \to 0$ as $n \to \infty$. However, this condition is not \emph{sufficient} to ensure convergence.
+
+Consider the \emph{harmonic sequence} $a_n=1/n$ and the corresponding infinite \emph{harmonic series} $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n}$. This series is divergent. To see this compare the following $2$ infinite series
+\begin{align*}
+  &1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}+\frac{1}{9}+\cdots+\frac{1}{16}+\frac{1}{17}\cdots\\
+  >&1+\frac{1}{2}+\frac{1}{4}+\frac{1}{4}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{16}+\cdots+\frac{1}{16}+\frac{1}{32}\cdots\\
+  = & 1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\cdots
+\end{align*}
+The first series is the harmonic series and the terms in the second series are less than or equal to the corresponding terms in the harmonic series. However, the second series diverges as it is the sum of an infinite number of $1/2$ terms. So the harmonic series is always greater than a series which diverges, and so the harmonic series itself is divergent.
+
+So even though the terms $a_n \to 0$, the addition of an infinite number of them can still cause a series to diverge as $n \to \infty $. A better test for whether a series converges is needed.
+
+\subsection*{Ratio Test}
+To determine whether an infinite series is convergent, the ratio test can be applied. The test examines the ratio of successive terms in the sequence as $n \to \infty$. If this ratio has a limit, the sequences behaves like a geometric sequence for large $n$, and so if the ratio is less than $1$, the series will be convergent.
+
+Formally, given a sequence $a_n$ and the corresponding infinite series $\displaystyle \sum_{n=0}^\infty a_n$. Let
+\begin{equation*}
+  R=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|
+\end{equation*}
+If this limit $R$ exists, then
+\begin{itemize}
+\item if $R<1$, the series is convergent.
+\item if $R>1$, the series is divergent.
+\item if $R=1$ or $R$ does not exist, then the ratio test was inconclusive.
+\end{itemize}
+\noindent  \textbf{Example 1:}\\
+Let $a_n=\dfrac{1}{n!}$, and consider the infinite series $\displaystyle \sum_{n=0}^{\infty} \frac{1}{n!} = 1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{4!}+\cdots$. Since $a_{n+1}=\dfrac{1}{(n+1)!}$
+\begin{equation*}
+  \left| \frac{a_{n+1}}{a_n}\right|=\left| \frac{1}{(n+1)!}\cdot \frac{n!}{1}\right|=\left| \frac{n!}{(n+1)!}\right|=\left| \frac{1}{n+1}\right|=\frac{1}{n+1}
+\end{equation*}
+So to evaluate $R$,
+\begin{equation*}
+  R=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|=\lim_{n \to \infty} \frac{1}{n+1}=0
+\end{equation*}
+So $R=0$ meaning that $R<1$, and therefore the infinite series $ \sum_{n=0}^{\infty} \frac{1}{n!}$ is convergent.
+
+\noindent  \textbf{Example 2:}\\
+Let $a_n=\dfrac{2^n}{n^2}$, and consider the infinite series $\displaystyle \sum_{n=0}^{\infty} \frac{2^n}{n^2}$. Since $a_{n+1}=\dfrac{2^{n+1}}{(n+1)^2}$
+\begin{equation*}
+  \left| \frac{a_{n+1}}{a_n}\right|=\left| \frac{2^{n+1}}{(n+1)^2}\cdot \frac{n^2}{2^n}\right|=\left| \frac{2^{n+1}}{2^n}\cdot\frac{n^2}{(n+1)^2}\right|=2 \left(\frac{n}{n+1}\right)^2
+\end{equation*}
+So to evaluate $R$,
+\begin{equation*}
+  R=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|=\lim_{n \to \infty} 2 \left(\frac{n}{n+1}\right)^2=\lim_{n \to \infty} 2 \left(\frac{1}{1+\frac{1}{n}}\right)^2=2\left(\frac{1}{1+0}\right)^2=2
+\end{equation*}
+So $R=2$ meaning $R>1$, and therefore the infinite series $\displaystyle \sum_{n=0}^{\infty} \frac{2^n}{n^2}$ is divergent.
+
+\section*{Functions Defined by Infinite Series}
+Convergent infinite series are often used to define functions. The \emph{exponential function} $y=e^x=\text{exp}(x)$ is defined as
+\begin{equation}
+\label{eq:exp_def_taylor}
+  \text{exp}(x) = \sum_{n=0}^{\infty} \frac{x^n}{n!}=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\cdots
+\end{equation}
+The ratio test can be used to show that this infinite series is convergent for all values of $x$. Here, the sequence terms are $a_n=\dfrac{x^n}{n!}$, so $a_{n+1}=\dfrac{x^{n+1}}{(n+1)!}$, and
+\begin{equation*}
+  \left| \frac{a_{n+1}}{a_n}\right|=\left| \frac{x^{n+1}}{(n+1)!}\cdot \frac{n!}{x^n}\right|=\left| \frac{x^{n+1}}{x^n}\cdot\frac{n!}{(n+1)!}\right|=\left|x \frac{1}{n+1}\right| = \frac{|x|}{n+1}
+\end{equation*}
+So to evaluate $R$,
+\begin{equation*}
+  R=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|=\lim_{n \to \infty} \frac{|x|}{n+1}=0
+\end{equation*}
+So $R<1$ and the series is convergent for all $x$.
+
+The infinite series can be used to approximate $e^x$ to as many decimal places desired. To do this, use the sequence terms to evaluate the terms in the series $\displaystyle s_n=\sum_{k=0}^{n} \frac{x^k}{k!}$. This is best done using a table similar to the one below.
+
+For example, to evaluate $e^{0.3}$ to three decimal places\footnote{below the decimal point}, the terms in the series $\displaystyle s_n=\sum_{k=0}^{n} \frac{(0.3)^k}{k!}$ must be computed until the desired accuracy is reached.
+%\begin{tabular}{|l|c|c:c:c:c:c:c:c:c:c:c:c|c|c:c:c:c:c:c:c:c:c:c:c|}\hline
+\begin{center}
+  
+\begin{tabular}{|l|c|p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}|c|p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}p{0.1em}|}\hline
+$n$ & \ & \multicolumn{11}{c|}{$a_n$} & \ & \multicolumn{11}{c|}{$s_n$} \\\hline
+$0$ & \ &
+$1$ & $\cdot$ & $0$ &  &  &  &  &  &  &  &  & \ &
+$1$ & $\cdot$ & $0$ &  &  &  &  &  &  &  &  \\ \hline
+$1$ & \ &
+$0$ & $\cdot$ & $3$ &  &  &  &  &  &  &  &  & \ &
+$1$ & $\cdot$ & $3$ &  &  &  &  &  &  &  &  \\ \hline
+$2$ & \ &
+$0$ & $\cdot$ & $0$ & $4$ & $5$ &  &  &  &  &  &  & \ &
+$1$ & $\cdot$ & $3$ & $4$ & $5$ &  &  &  &  &  &  \\ \hline
+$3$ & \ &
+$0$ & $\cdot$ & $0$ & $0$ & $4$ & $5$ &  &  &  &  &  & \ &
+$1$ & $\cdot$ & $3$ & $4$ & $9$ & $5$ &  &  &  &  &  \\ \hline
+$4$ & \ &
+$0$ & $\cdot$ & $0$ & $0$ & $0$ & $3$ & $3$ & $7$ & $5$ &  &  & \ &
+$1$ & $\cdot$ & $3$ & $4$ & $9$ & $8$ & $3$ & $7$ & $5$ &  &  \\ \hline
+$5$ & \ &
+$0$ & $\cdot$ & $0$ & $0$ & $0$ & $0$ & $2$ & $0$ & $2$ & $5$ &  & \ &
+$1$ & $\cdot$ & $3$ & $4$ & $9$ & $8$ & $5$ & $7$ & $7$ & $5$ &  \\ \hline
+\end{tabular}
+\end{center}
+The series can be summed indefinitely but in practice some kind of stopping condition is needed. A heuristic stopping condition can be used; for example, we can stop when the terms $a_n$ become small enough, or when the digits of $s_n$ appear to have converged to enough decimal places. The first condition assumes that the terms $a_n$ never become large again, and the second condition may have problems if the terms $a_n$ alternate around $0$. However, in practice, we can stop if the series appears to have converged after a few iterations.
+
+In this case, to $3$ decimal places $e^{0.3} \cong 1.349$. A more accurate estimate would be $e^{0.3}\cong 1.34985880757600310398$.
+
+\end{document}
