@@ -1,0 +1,171 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{natbib}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm, amsmath}
+%\usepackage[dvips]{graphicx}
+
+\renewcommand{\baselinestretch}{1.8}
+
+% left top textwidth textheight headheight % headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{23.5cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+\author{Kevin O'Brien}
+
+\subsection{Matrices}
+\[
+ A =
+ \begin{bmatrix}
+ a_{11} & a_{12} & \cdots & a_{1n} \\
+ a_{21} & a_{22} & \cdots & a_{2n} \\
+ \vdots & \vdots & \ddots & \vdots \\
+ a_{m1} & a_{m2} & \cdots & a_{mn}
+ \end{bmatrix}\]
+ 
+\subsection*{Augmented Matrices}
+Given the matrices $A$ and $B$, where
+
+\[
+A =
+  \begin{bmatrix}
+    1 & 3 & 2 \\
+    2 & 0 & 1 \\
+    5 & 2 & 2
+  \end{bmatrix}
+, \quad
+B =
+  \begin{bmatrix}
+    4 \\
+    3 \\
+    1
+  \end{bmatrix},
+\]
+
+the augmented matrix ($A|B$) is written as
+
+\[
+(A|B)=
+  \left[\begin{array}{ccc|c}
+    1 & 3 & 2 & 4 \\
+    2 & 0 & 1 & 3 \\
+    5 & 2 & 2 & 1
+  \end{array}\right].
+\]
+
+This is useful when solving systems of linear equations.
+
+
+\begin{eqnarray} \nonumber
+x + 2y + 3z = 0 \\ \nonumber
+3x + 4y + 7z = 2 \\ \nonumber
+6x + 5y + 9z = 11 \nonumber
+\end{eqnarray}
+
+the coefficients and constant terms give the matrices
+\[
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+3 & 4 & 7 \\
+6 & 5 & 9
+\end{bmatrix}
+, \quad
+B =
+\begin{bmatrix}
+0 \\
+2 \\
+11
+\end{bmatrix},
+\]
+
+and hence give the augmented matrix
+\[
+(A|B) =
+  \left[\begin{array}{ccc|c}
+1 & 2 & 3 & 0 \\
+3 & 4 & 7 & 2 \\
+6 & 5 & 9 & 11
+  \end{array}\right]
+\]
+
+\[\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 4 \\
+0 & 1 & 0 & 1 \\
+0 & 0 & 1 & -2 \\
+  \end{array}\right]\]
+
+\subsection*{Reduced Row Echelon Form}
+
+Specifically, a matrix is in row echelon form if
+\begin{itemize}
+\item All nonzero rows (rows with at least one nonzero element) are above any rows of all zeroes (all zero rows, if any, belong at the bottom of the matrix).
+\item The leading coefficient (the first nonzero number from the left, also called the pivot) of a nonzero row is always strictly to the right of the leading coefficient of the row above it.
+\item All entries in a column below a leading entry are zeroes (implied by the first two criteria).[1]
+\end{itemize}
+\[\left[ \begin{array}{ccccc}
+1 & a_0 & a_1 & a_2 & a_3 \\
+0 & 0 & 1 & a_4 & a_5 \\
+0 & 0 & 0 & 1 & a_6
+\end{array} \right]\]
+\newpage
+\subsection*{Determinant of a $3 \times 3$ matrix}
+\[ |A| = a_{11} \left|\begin{array}{cc}
+a_{22} & a_{23} \\
+a_{32} & a_{33} \\
+\end{array}  right| - a_{12} \left| \begin{array}{cc}
+a_{21} & a_{23} \\
+a_{31} & a_{33} \\
+\end{array} right| + a_{13} \left|\begin{array}{cc}
+a_{21} & a_{22} \\
+a_{31} & a_{32} \\
+\end{array}  right| \]
+%--------------------------------------------------%
+\newpage
+\subsection*{Fundamental Theorem of Linear Algebra}
+\begin{itemize}
+\item The rank of a matrix is $n$.
+\item The determinant of the matrix is not zero.
+\item The matrix is invertible.
+\item The rows are linearly independent
+\item There exists a solution to a set of Linear equation based on the matrix
+\end{itemize}
+%--------------------------------------------------%
+\subsection*{Diagonalization}
+\[ A = PDP^{-1} \]
+
+By extension
+\[ D = P^{-1}AP\]
+%--------------------------------------------------%
+\newpage
+\subsection*{Systems of Linear Equations}
+
+\[ \left(\begin{array}{ccc}
+a_{11} & a_{12} &a_{13} \\
+a_{21} & a_{22} &a_{23} \\
+a_{31} & a_{32} &a_{33} \\ \right)
+\left(\begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3} \\ \right) = \left(\begin{array}{c}
+b_{1} \\
+b_{2} \\
+b_{3} \\ \right)
+
+\]
+\begin*{eqnarray}
+a_{11}x_{1} + a_{12}x_{2} + a_{13}x_{3} = b_1 \\
+a_{21}x_{1} + a_{22}x_{2} + a_{23}x_{3} = b_2 \\
+a_{31}x_{1} + a_{32}x_{2} + a_{33}x_{3} = b_3 \\
+\end{eqnarray}
+
+
+\end{document}

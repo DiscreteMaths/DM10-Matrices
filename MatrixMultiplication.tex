@@ -1,0 +1,171 @@
+\documentclass{beamer}
+%------------------------------------------------------------------%
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+%------------------------------------------------------------------%
+
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+%----------------------------------------------------------------------------------------------%
+\title[Short Paper Title] % (optional, use only with long paper titles)
+{Presentation Title}
+
+\subtitle
+{Presentation Subtitle} % (optional)
+
+\author[Author, Another] % (optional, use only with lots of authors)
+{F.~Author\inst{1} \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+{
+  \inst{1}%
+  Department of Computer Science\\
+  University of Somewhere
+  \and
+  \inst{2}%
+  Department of Theoretical Philosophy\\
+  University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[Short Occasion] % (optional)
+{Date / Occasion}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+%=====================================================%
+\begin{frame}{Outline}
+  \tableofcontents
+  
+\end{frame}
+
+%======================================================%
+\section{Matrix Multiplication}
+
+\subsection[Short First Subsection Name]{First Subsection Name}
+
+\begin{frame}{Make Titles Informative. Use Uppercase Letters.}{Subtitles are optional.}
+
+  \begin{itemize}
+  \item
+    Use \texttt{itemize} a lot.
+  \item
+    Use very short sentences or short phrases.
+  \end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------%
+\begin{frame}{Matrix Multiplication}
+\Large
+\begin{itemize}
+\item First ensure that the dimensions of both matrices are compatible for multiplication i.e. the number of columns of the first matrix is equal to the number of rows of the second matrix.
+\item The first row of matrix 1 will have the same number of elements as the first column of matrix 2. Multiply the corresponding elements, and add them up.
+\end{itemize}
+\[ \right( \begin{array}{c c c }
+a & b & c \\
+... & ... & ... \\
+... & ... & ... 
+\end{array}  \left) \times \right( \begin{array}{c c c }
+x & ... & ... \\
+y & ... & ... \\
+z & ... & ... \
+\end{array}  \left) \]
+
+
+
+\end{frame}
+%---------------------------------------------------------------------------------------------------%
+
+\subsection{Second Subsection}
+%------------------------------------------------------%
+\begin{frame}{Make Titles Informative.}
+\end{frame}
+
+\begin{frame}{Make Titles Informative.}
+\end{frame}
+
+
+
+\section*{Summary}
+
+\begin{frame}{Summary}
+
+  \begin{itemize}
+  \item
+    The \alert{minor} of a matrix
+  \item
+    The \alert{cofactor}of a matrix element
+  \item
+    Perhaps a \alert{third message}, but not more than that.
+  \end{itemize}
+  
+  % The following outlook is optional.
+  \vskip0pt plus.5fill
+  \begin{itemize}
+  \item
+    Outlook
+    \begin{itemize}
+    \item
+      Something you haven't solved.
+    \item
+      Something else you haven't solved.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
+
+
