@@ -1,0 +1,62 @@
+Multiplication[edit]
+Given a linear transformation A from X to Y and a linear transformation B from Y to Z, then define the function AB from X to Z to be the composition of the two functions. One can easily verify that this is also a linear transformation. 
+Here are some useful relations that can easily be verified: 
+μ ( A B ) = ( μ A ) B {\displaystyle \mu (AB)=(\mu A)B} 
+
+( A + B ) C = A C + B C {\displaystyle (A+B)C=AC+BC} 
+
+C ( A + B ) = C A + C B {\displaystyle C(A+B)=CA+CB} 
+
+( A B ) C = A ( B C ) {\displaystyle (AB)C=A(BC)} 
+.
+Corresponding algebra of matrices[edit]
+Since there is a one-to-one correspondence between linear transformations from m-dimension spaces to n-dimensional spaces and m-by-n matrices, the addition, scalar multiplication, and multiplication operations are defined in their one-to-one correspondence, and all properties stated above hold for matrices. The addition of matrices M and N can be defined as the matrix that corresponds to the sum m+n where m and n are the linear transformations that correspond to M and N respectively. The other operations are defined similarly. 
+Addition[edit]
+Let A = |aij| and B = |bij| be two matrices of dimension n by m. Consider A and B which are the corresponding linear transformations from an m-dimensional vector space M to an n-dimensional vector space N. Let m1, m2, m3, ..., mm, be basis vectors of M and n1, n2, n3, ..., nn be basis vectors of N. Then 
+A ( m i ) = ∑ j = 1 n a i j n j {\displaystyle A(m_{i})=\sum _{j=1}^{n}a_{ij}n_{j}} 
+, and 
+B ( m i ) = ∑ j = 1 n b i j n j {\displaystyle B(m_{i})=\sum _{j=1}^{n}b_{ij}n_{j}} 
+. 
+Thus 
+( A + B ) ( m i ) = ∑ j = 1 n ( a i j + b i j ) n j {\displaystyle (A+B)(m_{i})=\sum _{j=1}^{n}(a_{ij}+b_{ij})n_{j}} 
+ 
+so the matrix of this operator has entries |aij+bij|. In other words, the sum of two matrices have entries that are the sum of the corresponding entries of the two matrices. 
+Examples: 
+( 1 3 1 0 1 2 ) + ( 0 0 7 5 2 1 ) = ( 1 + 0 3 + 0 1 + 7 0 + 5 1 + 2 2 + 1 ) = ( 1 3 8 5 3 3 ) {\displaystyle {\begin{pmatrix}1&3\\1&0\\1&2\end{pmatrix}}+{\begin{pmatrix}0&0\\7&5\\2&1\end{pmatrix}}={\begin{pmatrix}1+0&3+0\\1+7&0+5\\1+2&2+1\end{pmatrix}}={\begin{pmatrix}1&3\\8&5\\3&3\end{pmatrix}}} 
+
+Once addition is defined we have obviously also defined subtraction. A - B is computed by subtracting corresponding elements of A and B, and has the same dimensions as A and B. For example: 
+( 1 3 1 0 1 2 ) − ( 0 0 7 5 2 1 ) = ( 1 − 0 3 − 0 1 − 7 0 − 5 1 − 2 2 − 1 ) = ( 1 3 − 6 − 5 − 1 1 ) {\displaystyle {\begin{pmatrix}1&3\\1&0\\1&2\end{pmatrix}}-{\begin{pmatrix}0&0\\7&5\\2&1\end{pmatrix}}={\begin{pmatrix}1-0&3-0\\1-7&0-5\\1-2&2-1\end{pmatrix}}={\begin{pmatrix}1&3\\-6&-5\\-1&1\end{pmatrix}}} 
+
+Scalar multiplication[edit]
+Scalar multiplication of matrices shall be defined to be the corresponding matrix of the scalar product of the corresponding linear transformations. 
+Consider a matrix A with entries |aij| and its corresponding linear transformation A from M to N, and an element of a field 
+μ {\displaystyle \mu } 
+, and let m1, m2, m3, ..., mm, be basis vectors of M and n1, n2, n3, ..., nn be basis vectors of N. Since 
+( μ A ) ( m j ) = ∑ i = 1 m μ a i j n i = μ ∑ i = 1 m a i j n i {\displaystyle (\mu A)(m_{j})=\sum _{i=1}^{m}\mu a_{ij}n_{i}=\mu \sum _{i=1}^{m}a_{ij}n_{i}} 
+, the entries of the corresponding matrix is has entries |
+μ {\displaystyle \mu } 
+aij|. 
+For example, multiplication by 2 of a matrix:
+2 ⋅ ( 1 8 − 3 4 − 2 5 ) = ( 2 ⋅ 1 2 ⋅ 8 2 ⋅ − 3 2 ⋅ 4 2 ⋅ − 2 2 ⋅ 5 ) = ( 2 16 − 6 8 − 4 10 ) {\displaystyle 2\cdot {\begin{pmatrix}1&8&-3\\4&-2&5\end{pmatrix}}={\begin{pmatrix}2\cdot 1&2\cdot 8&2\cdot -3\\2\cdot 4&2\cdot -2&2\cdot 5\end{pmatrix}}={\begin{pmatrix}2&16&-6\\8&-4&10\end{pmatrix}}} 
+
+Scalar Multiplication has the following properties, which have been proven because of its one-to-one correspondence to Linear Transformations: 
+Left distributivity: (α+β)A = αA+βA.
+Right distributivity: α(A+B) = αA+αB.
+Associativity: (αβ)A=α(βA)).
+1A = A.
+0A= 0.
+(-1)A = -A.
+Matrix multiplication[edit]
+As above, matrix multiplication will also be defined as its correspondence to linear transformations. The product of two matrices is the corresponding matrices of the product of the corresponding two linear transformations. 
+Consider an o by n dimensional matrix A with entries |aij|, n by m dimensional matrix B with entries |bij|, and let A be a linear transformation from n-dimensional M to o-dimensional O that corresponds to A, and let B be a linear transformation from m-dimensional N to n-dimensional N that corresponds to B, and let m1, m2, m3, ..., mm, be basis vectors of M, n1, n2, n3, ..., nn, be basis vectors of N, o1, o2, o3, ..., oo, be basis vectors of O. Then 
+( A B ) ( m i ) = A ( ∑ j = 1 n b j i n j ) = ∑ j = 1 n b j i A ( n j ) = ∑ j = 1 n b j i ∑ k = 1 o a k j o k = ∑ k = 1 o ( ∑ j = 1 n a k j b j i ) o k {\displaystyle (AB)(m_{i})=A(\sum _{j=1}^{n}b_{ji}n_{j})=\sum _{j=1}^{n}b_{ji}A(n_{j})=\sum _{j=1}^{n}b_{ji}\sum _{k=1}^{o}a_{kj}o_{k}=\sum _{k=1}^{o}(\sum _{j=1}^{n}a_{kj}b_{ji})o_{k}} 
+ 
+Thus the corresponding matrix has entries |pij| that are given by: 
+p i j = ∑ k = 1 n a i k b k j {\displaystyle p_{ij}=\sum _{k=1}^{n}a_{ik}b_{kj}} 
+ 
+For example: 
+( 1 0 2 − 1 3 1 ) × ( 3 1 2 1 1 0 ) = ( ( 1 × 3 + 0 × 2 + 2 × 1 ) ( 1 × 1 + 0 × 1 + 2 × 0 ) ( − 1 × 3 + 3 × 2 + 1 × 1 ) ( − 1 × 1 + 3 × 1 + 1 × 0 ) ) {\displaystyle {\begin{pmatrix}1&0&2\\-1&3&1\\\end{pmatrix}}\times {\begin{pmatrix}3&1\\2&1\\1&0\\\end{pmatrix}}={\begin{pmatrix}(1\times 3+0\times 2+2\times 1)&(1\times 1+0\times 1+2\times 0)\\(-1\times 3+3\times 2+1\times 1)&(-1\times 1+3\times 1+1\times 0)\\\end{pmatrix}}} 
+
+= ( 5 1 4 2 ) . {\displaystyle ={\begin{pmatrix}5&1\\4&2\\\end{pmatrix}}.} 
+
+ 
