@@ -1,0 +1,90 @@
+
+
+Matrix product
+Matrix multiplication has the following properties, which have been verified due to the fact that they are also true of linear transformations. 
+Associativity: A(BC) = (AB)C.
+Left distributivity: A(B+C) = AB+AC.
+Right distributivity: (A+B)C = AC+BC.
+IA = A = AI.
+α(BC) = (αB)C = B(αC).
+Matrix multiplication is in general not commutative, i.e. there exist matrices for which AB 
+≠ {\displaystyle \neq } 
+ BA. An example can be given by: 
+A = ( 7 8 9 10 11 12 ) {\displaystyle A={\begin{pmatrix}7&8\\9&10\\11&12\end{pmatrix}}} 
+ and 
+B = ( 1 2 3 4 5 6 ) {\displaystyle B={\begin{pmatrix}1&2&3\\4&5&6\end{pmatrix}}} 
+ 
+The way matrix multiplication is defined seems illogical and strange; why can matrix multiplication not be defined as just multiplying corresponding entries as in the case of addition and scalar multiplication? Unfortunately the actual answer will be available to us only later on in Chapter 3. In the meantime we will satisfy ourselves by noting the advantage that matrix multiplication gives us by representing a linear system in matrix form. This will be clear in the following section. 
+At this point we see fit to make another definition. An n by n matrix A is invertible if and only if there exists a matrix B such that 
+AB = In = BA.
+In this case, B is the inverse matrix of A, denoted by A−1. Clearly the inverse of the identity matrix is itself. We will study invertible matrices in detail later. 
+One point more is to be noted here. The type of matrix multiplication when the product matrix is simply the matrix obtained by multiplying the corresponding entries of two equal dimension matrices also has a name. It is called the Hadamard product. We shall not use this kind of multiplication. Throughout the book matrix multiplication will always refer to the matrix product defined above. 
+Determinants of Products of Matrices (Binet's Theorem)[edit]
+In addition, the determinant is a multiplicative map in the sense that 
+det ( A B ) = det ( A ) det ( B ) {\displaystyle \det(AB)=\det(A)\det(B)\,} 
+ for all n-by-n matrices 
+A {\displaystyle A} 
+ and 
+B {\displaystyle B} 
+.
+This is generalized by the Cauchy-Binet formula to products of non-square matrices. 
+Matrices and system of linear equations[edit]
+The concept of a matrix was historically introduced to simplify the solution of linear systems although they today have much greater and broad-reaching applications. Let's see how a linear system can be represented using a matrix. 
+Consider a general system of m linear equations with n unknowns: 
+a 11 x 1 + a 12 x 2 + ⋯ + a 1 n x n = b 1 a 21 x 1 + a 22 x 2 + ⋯ + a 2 n x n = b 2 ⋮ ⋮ ⋮ ⋮ a m 1 x 1 + a m 2 x 2 + ⋯ + a m n x n = b m {\displaystyle {\begin{alignedat}{7}a_{11}x_{1}&&\;+\;&&a_{12}x_{2}&&\;+\cdots +\;&&a_{1n}x_{n}&&\;=\;&&&b_{1}\\a_{21}x_{1}&&\;+\;&&a_{22}x_{2}&&\;+\cdots +\;&&a_{2n}x_{n}&&\;=\;&&&b_{2}\\\vdots \;\;\;&&&&\vdots \;\;\;&&&&\vdots \;\;\;&&&&&\;\vdots \\a_{m1}x_{1}&&\;+\;&&a_{m2}x_{2}&&\;+\cdots +\;&&a_{mn}x_{n}&&\;=\;&&&b_{m}\\\end{alignedat}}} 
+
+The system is equivalent to a matrix equation of the form 
+A x = b {\displaystyle A{\mathbf {x}}={\mathbf {b}}} 
+
+where A is an m×n matrix, x is a column matrix with n entries, and b is a column matrix with m entries. 
+A = [ a 11 a 12 ⋯ a 1 n a 21 a 22 ⋯ a 2 n ⋮ ⋮ ⋱ ⋮ a m 1 a m 2 ⋯ a m n ] , x = [ x 1 x 2 ⋮ x n ] , b = [ b 1 b 2 ⋮ b m ] {\displaystyle A={\begin{bmatrix}a_{11}&a_{12}&\cdots &a_{1n}\\a_{21}&a_{22}&\cdots &a_{2n}\\\vdots &\vdots &\ddots &\vdots \\a_{m1}&a_{m2}&\cdots &a_{mn}\end{bmatrix}},\quad {\mathbf {x}}={\begin{bmatrix}x_{1}\\x_{2}\\\vdots \\x_{n}\end{bmatrix}},\quad {\mathbf {b}}={\begin{bmatrix}b_{1}\\b_{2}\\\vdots \\b_{m}\end{bmatrix}}} 
+
+Clearly our manner of defining matrix multiplication is used in representing the linear system in this fashion because now the product of the matrix A and the matrix x gives us precisely the matrix b. 
+Representing linear systems in this fashion also enables us to easily prove the following theorem: 
+Theorem 1: Any system of linear equations has either no solution, exactly one solution or infinitely many solutions. 
+Proof: Suppose a linear system Ax = b has two different solutions given by X and Y. Then let Z = X - Y. Clearly Z is non zero and A(X + kZ) = AX + kAZ = b + k(AX - AY) = b + k(b - b) = b so that X + kZ is a solution to the system for every possible value of k. Since k can assume infinitely many values so clearly we have an infinite number of solutions. 
+Exercises[edit]
+Hints to many of the exercises can be found at Famous Theorems of Mathematics/Algebra/Matrix Theory. 
+1. Let A and B be m × matrices. Then: 
+(i) 
+( k A ) T {\displaystyle (kA)^{T}} 
+ = 
+k A T {\displaystyle kA^{T}} 
+
+(ii) 
+( A + B ) T = A T + B T {\displaystyle (A+B)^{T}=A^{T}+B^{T}} 
+
+(iii) 
+( A B ) T = B T A T {\displaystyle (AB)^{T}=B^{T}A^{T}} 
+
+2. Let a triangular matrix be a square matrix with either all (i,j) entries zero for either i<j (in which case it is called an lower triangular matrix) or for j<i (in which case it is called an upper triangular matrix). Show that any triangular matrix satisfying 
+ {\displaystyle AA^{T}=A^{T}A} 
+ is a diagonal matrix. 
+3. For a square matrix A show that: 
+(i) 
+A A T {\displaystyle AA^{T}} 
+ and 
+A + A T {\displaystyle A+A^{T}} 
+ are symmetric
+(ii) 
+A − A T {\displaystyle A-A^{T}} 
+ is skew symmetric
+(iii) A can be expressed as the sum of a symmetric matrix, 
+1 2 ( A + A T ) {\displaystyle {\frac {1}{2}}(A+A^{T})} 
+ and a skew symmetric matrix 
+1 2 ( A − A T ) {\displaystyle {\frac {1}{2}}(A-A^{T})} 
+
+4. Suppose A is a m×n matrix and x is a n×1 column vector. Show that if 
+ {\displaystyle x={\begin{pmatrix}x_{1}\\x_{2}\\\vdots \\x_{n}\end{pmatrix}}} 
+ and 
+ {\displaystyle A={\begin{pmatrix}c_{1}&c_{2}&\cdots c_{n}\end{pmatrix}}} 
+ where 
+{\displaystyle c_{j}={\begin{pmatrix}A_{1j}\\A_{2j}\\\vdots \\A_{mj}\end{pmatrix}}} 
+ then 
+ {\displaystyle Ax=x_{1}c_{1}+x_{2}c_{2}+\cdots x_{n}c_{n}} 
+. This is also expressed by saying that Ax is a linear combination of the columns of A. 
+
+%===================%
+ 
+ 
+
