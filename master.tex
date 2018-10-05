@@ -1,0 +1,311 @@
+% Section 10 A
+%------------------------------------%
+% What is a matrix?
+% Order of a matrix
+% Matrix Addition and Subtraction
+% commutativity and Associativity
+% Matrix Multiplication
+
+% The Identity Matrix
+% Tranpose of a Matrix
+% Symmetric Matices
+%-------------------------------------%
+
+\subsection{What is a matrix?}
+
+\[
+\begin{bmatrix}
+20 & 5 & -6 \\
+1 & 9 & -13 \\
+4 & 6 & 0 \\ 
+\end{bmatrix}
+\]
+
+
+%-------------------------------------%
+
+\subsection{Order of a Matrix}
+
+Consider the following matrix $A$
+\[A =  
+\right(\begin{array}{ccc}
+6 & 3 & 2 \\
+4 & 7 & 5 \\
+\end{array}\left)
+\] 
+
+\begin{itemize}
+\item $A$ has 2 rows and 3 columns.
+\item We would say A is a $2 \times 3$ matrix.
+\end{itemize}
+
+
+
+%-------------------------------------%
+
+
+\subsection{Square Matrices}
+
+A square matrix is a matrix with the same 
+number of rows and columns. An $n\times n$ matrix is known as a square matrix of order n. Any two square matrices of the same order can be added and multiplied. 
+
+
+%-------------------------------------%
+
+
+\subsection{Diagonal and triangular matrices}
+
+
+If all entries of A below the main diagonal are zero, A is called an upper triangular matrix. Similarly if all entries of A above the main diagonal are zero, A is called a lower triangular matrix. If all entries outside the main diagonal are zero, A is called a diagonal matrix.
+
+
+%-------------------------------------%
+%-------------------------------------%
+
+\subsection{Commutativity and Associativity}
+Matrices of the same size can be added or subtracted element by element. 
+
+\[ A \times B \neq B \times A \]
+
+
+%-------------------------------------%
+
+\subsection{The Identity Matrix}
+
+\[ 
+\right(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}\left)
+\] 
+
+
+%-------------------------------------%
+
+\subsection{Tranpose of a Matrix}
+
+
+\begin{itemize}
+\item A \textbf{symmetric} matrix is a matrix that is identical to it's tranpose.
+
+%-------------------------------------%
+
+%====================================================================================%
+% Gaussian Elimination
+
+\left(
+\begin{array}{cccccc}
+1 & 1 &2 & &   & 1 \\
+1 & 0 &2 & & 0 & 1 \\
+0 & 1 &2 & & 1 & 0 \\
+1 & 1 &2 & & 0 & 0 \\
+1 & 0 &2 & & 1 & 1 \\
+0 & 1 &2 & & 0 & 1 \\
+\end{array}
+\right)
+
+\left(
+\begin{array}{c|cccccc}
+hline \\ 
+  & a & b & c & d & e & f \\ hline \\
+a &1 & 1 &2 & &   & 1 \\
+b & 0 &2 & & 0 & 1 \\
+c & 1 &2 & & 1 & 0 \\
+d & 1 &2 & & 0 & 0 \\
+e & 0 &2 & & 1 & 1 \\
+f & 1 &2 & & 0 & 1 \\
+\end{array}
+
+\left(
+\begin{array}{ccccc}
+3 & 4 &2 & : & 3 \\
+3 & 4 &2 & : & 3 \\
+3 & 4 &2 & : & 3 \\
+\end{array}
+\right)
+\begin{array}{l}
+&r_1& \\
+&r_2& \\
+&r_3& \\
+\end{array}
+
+%---------------------------------%
+\left(
+\begin{array}{ccccc}
+3 & 4 &2 & : & 3 \\
+3 & 4 &2 & : & 3 \\
+3 & 4 &2 & : & 3 \\
+\end{array}
+\right)
+\begin{array}{l}
+&r_4 = r_1& \\
+&r_5 = r_2 - 2r_1& \\
+&r_6 = r_3 - 3r_1\\
+\end{array}
+
+
+
+\begin{itemize}
+\item Cholesky decomposition
+\item LU decomposition by Doolittle's method
+\end{itemize}
+%--------------------------------------------------%
+\newpage
+%---------------------------------%
+\section{Matrices}
+
+What are the dimensions of the following matrix
+
+
+\[ \left(
+\begin{array}{cc}
+a_1 & a_2 \\ 
+b_1 & b_2
+\end{array} \right)\left(
+\begin{array}{cc}
+c_1 & d_1 \\ 
+c_2 & d_2
+\end{array} \right) = \left(
+\begin{array}{cc}
+(a_1 \times c_1) + (a_2 \times c_2) & (a_1 \times d_1) + (a_2 \times d_2) \\ 
+(b_1 \times c_1) + (b_2 \times c_2) & (b_1 \times d_1) + (b_2 \times d_2)
+\end{array} \right) \]
+
+\bigskip
+\large{
+\[ \left(
+\begin{array}{cc}
+1 & 3 \\ 
+0 & 2
+\end{array} \right)\left(
+\begin{array}{cc}
+1 & 2 \\ 
+4 & 1
+\end{array} \right) = \left(
+\begin{array}{cc}
+(1 \times 1) + (3 \times 4) & (1 \times 2) + (3 \times 1) \\ 
+(0 \times 4) + (2 \times 4) & (0 \times 2) + (2 \times 1)
+\end{array} \right) = \left(
+\begin{array}{cc}
+14 & 5 \\ 
+8 & 2
+\end{array} \right) \]
+}
+
+\[ \left(
+\left(
+\begin{array}{cc}
+1 & 2 \\ 
+4 & 1
+\end{array} \right)
+\begin{array}{cc}
+1 & 3 \\ 
+0 & 2
+\end{array} \right) = ? \]
+
+%-------------------------------------------------------------------------%
+\newpage
+%-----------------------------------------------------%
+\section*{Session 10: Matrices and Systems of Equations}
+\begin{itemize}
+\item[10A.1] Dimensions of a Matrix
+\item[10A.2] Matrix Multiplication
+\item[10A.3] Matrix Calculations
+\item[10A.4] 
+\end{itemize}
+
+\begin{itemize}
+\item[10B.1] Systems of Equations
+\item[10B.2] Expression Systems of Equations as Matrices
+\item[10B.3] Augmented Matrices
+\item[10B.4] Guassian Elimination
+\end{itemize}
+
+
+
+What are the dimensions of the following matrix
+
+
+\[ \left(
+\begin{array}{cc}
+a_1 & a_2 \\ 
+b_1 & b_2
+\end{array} \right)\left(
+\begin{array}{cc}
+c_1 & d_1 \\ 
+c_2 & d_2
+\end{array} \right) = \left(
+\begin{array}{cc}
+(a_1 \times c_1) + (a_2 \times c_2) & (a_1 \times d_1) + (a_2 \times d_2) \\ 
+(b_1 \times c_1) + (b_2 \times c_2) & (b_1 \times d_1) + (b_2 \times d_2)
+\end{array} \right) \]
+
+\bigskip
+\large{
+\[ \left(
+\begin{array}{cc}
+1 & 3 \\ 
+0 & 2
+\end{array} \right)\left(
+\begin{array}{cc}
+1 & 2 \\ 
+4 & 1
+\end{array} \right) = \left(
+\begin{array}{cc}
+(1 \times 1) + (3 \times 4) & (1 \times 2) + (3 \times 1) \\ 
+(0 \times 4) + (2 \times 4) & (0 \times 2) + (2 \times 1)
+\end{array} \right) = \left(
+\begin{array}{cc}
+14 & 5 \\ 
+8 & 2
+\end{array} \right) \]
+}
+
+\[ \left(
+\left(
+\begin{array}{cc}
+1 & 2 \\ 
+4 & 1
+\end{array} \right)
+\begin{array}{cc}
+1 & 3 \\ 
+0 & 2
+\end{array} \right) = ? \]
+
+\newpage
+\section*{Gaussian Elimination}
+\[
+\left[\begin{array}{rrr|r}
+1 & 3 & 1 & 9 \\
+1 & 1 & -1 & 1 \\
+3 & 11 & 5 & 35
+\end{array}\right]
+\]
+
+\[
+\left[\begin{array}{rrr|r}
+\phantom{0}1 & 3 & 1 & 9 \\
+0 & -2 & -2 & -8 \\
+\phantom{0}0 & 2 & 2 & 8
+\end{array}\right]
+\]
+
+\[
+\left[\begin{array}{rrr|r}
+1 & 3 & 1 & 9 \\
+0 & -2 & -2 & -8 \\
+\phantom{0}0 & 0 & 0 & 0
+\end{array}\right]
+\]
+
+\[
+\left[\begin{array}{rrr|r}
+1 & 0 & -2 & -3 \\
+\phantom{0}0 & 1 & 1 & 4 \\
+0 & 0 & 0 & 0
+\end{array}\right] 
+\]
+
+
+\end{document}
